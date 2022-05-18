@@ -1,13 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Ubuntu:wght@300;400;500&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+body {
+    width: 100vw;
+    height: 99vw;
+    margin-top: 10px;
+    background-color: #F3F5FC;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
 #image{
-    background-image: url("../img/forca06.png");
+    background-image: url("../img/forca.png");
     width: 234px;
     height: 272px;
     background-repeat: no-repeat;
 }
 
+#secret-word {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.letter {
+    width: 16px;
+    text-align: center;
+    border-bottom: 2px solid #0A3871;
+    color: #0A3871;
+    padding: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+
+}
