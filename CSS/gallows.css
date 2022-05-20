@@ -72,3 +72,83 @@ body {
     color: #0A3871;
     margin-top: 30px;
 }
+
+@media (min-width: 321px){
+
+    .keyboard button{
+        width: 25px;
+        height: 25px;
+    }
+    #category{
+        font-size: 1.2em;
+    }
+    
+
+}
+
+@media (min-width: 376px){
+
+    .keyboard button{
+        width: 30px;
+        height: 30px;
+    }
+    #secret-word {
+        font-size: 1.3em;
+    }
+
+    #category{
+        font-size: 1.5em;
+    }
+
+    .letter {
+        width: 18px;
+    }
+    
+
+}
+
+@media (min-width: 426px){
+
+    .keyboard button{
+        width: 36px;
+        height: 36px;
+    }
+    #secret-word {
+        font-size: 1.5em;
+    }
+
+    #category{
+        font-size: 1.6em;
+    }
+
+    .letter {
+        width: 20px;
+    }
+    
+
+}
+
+@media (min-width: 769px){
+
+    .keyboard button{
+        width: 68px;
+        height: 68px;
+        font-size: 2em;
+    }
+    #secret-word {
+        font-size: 2.5em;
+    }
+
+    #category{
+        font-size: 2em;
+    }
+
+    .letter {
+        width: 35px;
+    }
+    
+
+}
+
+
+
