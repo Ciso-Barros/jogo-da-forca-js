@@ -1,5 +1,6 @@
+let dynamicList = [];
 let secreteWordDrawn
-let secreteWordCategory
+let WordCategory
 
 const words = [
     word001={
@@ -171,9 +172,31 @@ function createSecretWord(){
     const indexWord = parseInt(Math.random() * words.length)
 
     secreteWord = words[indexWord].name;
-    secreteCategory = words [indexWord].category;
+    WordCategory = words [indexWord].category;
 
     console.log(secreteWord);
-    console.log(secreteCategory);
+    console.log(WordCategory);
+}
+
+assembleWord()
+function assembleWord(){
+    const category = document.getElementById("category");
+    category.innerHTML = WordCategory;
+
+    const secretWordScreen = document.getElementById("secret-word");
+    secretWordScreen.innerHTML = "";
+
+    for(i = 0; i < secreteWord.length; i ++){
+        if(dynamicList[i] == undefined){
+            dynamicList[i] = "&nbsp;"
+            secretWordScreen.innerHTML = secretWordScreen.innerHTML + "<div class='letter'>" + dynamicList[i] + "</div>"
+        }
+        else{
+            secretWordScreen.innerHTML = secretWordScreen.innerHTML + "<div class='letter'>" + dynamicList[i] + "</div>"
+        }
+    }
+
+
+
 }
 
