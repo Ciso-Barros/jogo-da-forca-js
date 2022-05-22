@@ -77,6 +77,12 @@ body {
     margin-top: 30px;
 }
 
+.linksFooter{
+    margin-top: 30px;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+}
+
 @media (min-width: 321px){
 
     .keyboard button{
