@@ -1,6 +1,7 @@
+let attempts = 6;
 let dynamicList = [];
-let secreteWordDrawn
-let WordCategory
+let secreteWord;
+let WordCategory;
 
 const words = [
     word001={
@@ -178,7 +179,7 @@ function createSecretWord(){
     console.log(WordCategory);
 }
 
-assembleWord()
+assembleWord();
 function assembleWord(){
     const category = document.getElementById("category");
     category.innerHTML = WordCategory;
@@ -196,7 +197,101 @@ function assembleWord(){
         }
     }
 
-
-
 }
 
+function chosenKey(letter){
+    document.getElementById("kay-" + letter).disabled = true;
+    if (attempts > 0){
+        changeStyle("kay-" + letter);
+        compareList(letter);
+        assembleWord();
+    }
+
+    
+}
+
+function changeStyle(kay){
+    document.getElementById(kay).style.background = "#0A3871";
+    document.getElementById(kay).style.color = "#ffffff";
+}
+
+function compareList(letter){
+    const position = secreteWord.indexOf(letter)
+    if(position < 0){
+        attempts--
+        imageAppears();
+
+        if (attempts == 0)
+        {
+            openModal("OPS!!","Não foi dessa vez ... A palavra secreta era <br>" + secreteWord);
+        }
+        
+    }
+    else{
+        for(i = 0; i < secreteWord.length; i++){
+
+            if(secreteWord[i] == letter){
+                dynamicList[i] = letter;
+            }
+        }
+    }
+
+    let win = true;
+
+    for (i=0; i < secreteWord.length; i++){
+        if (secreteWord[i] != dynamicList[i]){
+        win = false;
+        }
+        
+    } 
+    if(win == true){
+
+        openModal("PARABÉNS!","Você venceu ...");
+            
+    }
+    
+   
+        
+}
+
+function imageAppears(){
+    switch(attempts){
+        case 5:
+            document.getElementById("image").style.background = "url('./img/forca01.png')";
+            break;
+        case 4:
+            document.getElementById("image").style.background = "url('./img/forca02.png')";
+            break;
+        case 3:
+            document.getElementById("image").style.background = "url('./img/forca03.png')";
+            break;
+        case 2:
+            document.getElementById("image").style.background = "url('./img/forca04.png')";
+            break; 
+        case 1:
+            document.getElementById("image").style.background = "url('./img/forca06.png')";
+            break;
+
+        default:
+            document.getElementById("image").style.background = "url('./img/forca.png')";
+            break;
+    }
+}
+
+function openModal(title, message){
+    let modalTitle = document.getElementById("myModaltitle");
+    modalTitle.innerText = title;
+
+    let modalBody = document.getElementById("modalBody");
+    modalBody.innerHTML = message;
+
+
+    $("#myModal").modal({
+        show: true
+    });
+}
+
+let btnRestart = document.querySelector("#btn-Restart")
+btnRestart.addEventListener("click", function(){
+    location.reload();
+});

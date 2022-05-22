@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/gallows.css" media="screen">
-
     <title>Jogo da forca</title>
 </head>
 <body>
@@ -22,45 +23,67 @@
             <div class="letter">G</div> -->
         </div>
         <div class="keyboard">
-            <button id="kay-A">A</button>
-            <button id="kay-C">C</button>
-            <button id="kay-B">B</button>
-            <button id="kay-D">D</button>
-            <button id="kay-E">E</button>
-            <button id="kay-F">F</button>
-            <button id="kay-G">G</button>
-            <button id="kay-H">H</button>
-            <button id="kay-I">I</button>
-        </div>
-        <div class="keyboard">
-            <button id="kay-J">J</button>
-            <button id="kay-K">K</button>
-            <button id="kay-L">L</button>
-            <button id="kay-M">M</button>
-            <button id="kay-N">N</button>
-            <button id="kay-O">O</button>
-            <button id="kay-P">P</button>
-            <button id="kay-Q">Q</button>
-            <button id="kay-R">R</button>
-        </div>
-        <div class="keyboard">
-            <button id="kay-S">S</button>
-            <button id="kay-T">T</button>
-            <button id="kay-U">U</button>
-            <button id="kay-V">V</button>
-            <button id="kay-W">W</button>
-            <button id="kay-X">X</button>
-            <button id="kay-Y">Y</button>
-            <button id="kay-Z">Z</button>
-            <button id="btn-Restart">🎮</button>
-        </div>
+            <div class="kay">
+                <button id="kay-A" onclick="chosenKey('A')">A</button>
+                <button id="kay-B" onclick="chosenKey('B')">B</button>
+                <button id="kay-C" onclick="chosenKey('C')">C</button>
+                <button id="kay-D" onclick="chosenKey('D')">D</button>
+                <button id="kay-E" onclick="chosenKey('E')">E</button>
+                <button id="kay-F" onclick="chosenKey('F')">F</button>
+                <button id="kay-G" onclick="chosenKey('G')">G</button>
+                <button id="kay-H" onclick="chosenKey('H')">H</button>
+                <button id="kay-I" onclick="chosenKey('I')">I</button>
+            </div>
+            <div class="kay">
+                <button id="kay-J" onclick="chosenKey('J')">J</button>
+                <button id="kay-K" onclick="chosenKey('K')">K</button>
+                <button id="kay-L" onclick="chosenKey('L')">L</button>
+                <button id="kay-M" onclick="chosenKey('M')">M</button>
+                <button id="kay-N" onclick="chosenKey('N')">N</button>
+                <button id="kay-O" onclick="chosenKey('O')">O</button>
+                <button id="kay-P" onclick="chosenKey('P')">P</button>
+                <button id="kay-Q" onclick="chosenKey('Q')">Q</button>
+                <button id="kay-R" onclick="chosenKey('R')">R</button>
+            </div>
+            <div class="kay">
+                <button id="kay-S" onclick="chosenKey('S')">S</button>
+                <button id="kay-T" onclick="chosenKey('T')">T</button>
+                <button id="kay-U" onclick="chosenKey('U')">U</button>
+                <button id="kay-V" onclick="chosenKey('V')">V</button>
+                <button id="kay-W" onclick="chosenKey('W')">W</button>
+                <button id="kay-X" onclick="chosenKey('X')">X</button>
+                <button id="kay-Y" onclick="chosenKey('Y')">Y</button>
+                <button id="kay-Z" onclick="chosenKey('Z')">Z</button>
+                <button id="btn-Restart">🎮</button>
+            </div>
+    </div>
         <div id="category">
             <!-- CATEGORIA -->
         </div>
-        <!--  inicio modal -->
+        <!--  inicio modal -->  
+  <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="myModaltitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body" id="modalBody"></div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">FECHAR</button>
+                </div>
+            </div>
+            </div>
+        </div>
 
-        <!-- fim modal -->
+<!-- fim modal -->
     </div>
     <script src="JS/gallows.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

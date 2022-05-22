@@ -64,6 +64,10 @@ body {
     font-family: 'Ubuntu', sans-serif;
 }
 
+.keyboard button:disabled{
+    cursor: not-allowed;
+}
+
 .keyboard button:hover{
     transform: scale(1.3);
 }
