@@ -18,5 +18,7 @@ Este é um jogo da forca simples desenvolvido utilizando HTML, CSS e JavaScript.
 - `index.html`: Arquivo principal que contém a estrutura HTML do jogo.
 - `style.css`: Estilos CSS para a aparência do jogo.
 - `script.js`: Lógica JavaScript para o funcionamento do jogo.
+- 
+Exemplo: https://ciso-barros.github.io/jogo-da-forca-js/
 
 Divirta-se jogando!
